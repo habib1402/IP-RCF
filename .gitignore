@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Data, weights and experiment outputs (released separately)
+data/
+pretrained_pth/
+runs/
+results/
+analyses/
+external_results/
+comparator_maps/
+*.pth
+*.pt
+*.safetensors
+*.ckpt
+
+# Local manifests with absolute paths
+splits/*.local.json
+
+# Generated figures and analysis outputs
+figures/
+analysis/outputs/
+
+# Fonts (license-restricted)
+fonts/
+*.ttf
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
