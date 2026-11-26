@@ -105,21 +105,6 @@ python TestIPRCF.py
 
 `TestIPRCF.py` is the exact frozen-evaluation script used in the paper. It verifies the SHA-256 of the released checkpoint and of the control results before evaluating, so it reproduces the reported numbers only with the released checkpoints. To evaluate your own checkpoint, adapt the constants at the top of the file.
 
-## Gain intervention and figures
-
-```bash
-# within-model intervention (CPU): learned gains vs gains set to zero
-CUDA_VISIBLE_DEVICES="" python analysis/run_gain_intervention_cpu.py
-
-cd analysis
-python make_fig1_evidence.py         # Fig. 1 paired comparison
-python make_fig2.py                  # Fig. 2 architecture
-python make_fig3.py                  # Fig. 3 contour correction and supervision
-python make_fig6_transfer.py         # internal vs benchmark transfer
-python make_results_figs.py --only 5 --iprcf_dev ../results/tmi_iprcf_multiscale_c64_seed42/predictions
-python make_fig7_failure.py          # failure taxonomy
-python make_fig4_intervention.py     # gain intervention
-```
 
 The analysis scripts read `IPRCF_ROOT` (default: the repository root, holding `runs/`, `results/`, and `analyses/`), `POLYP_DATA_ROOT`, and, optionally, `TMI_FIGURE_FONT_DIR` for Times New Roman. Without that font they fall back to a serif font. Figure numbers in the scripts follow the preprint; the paper orders them by first appearance.
 
