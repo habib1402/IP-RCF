@@ -6,7 +6,7 @@ This repository contains the model, the locked training and evaluation pipeline,
 
 ## Overview
 
-**IP-RCF** (identity-preserving residual contour fusion) adds a parallel high-frequency contour stream to a compact PVTv2-B0 + Plain-PFF decoder (3.48 M parameters, 1.686 GMACs at 352x352). The contour correction enters three semantic readouts through scalar gains
+**IP-RCF** adds a parallel high-frequency contour stream to a compact PVTv2-B0 + Plain-PFF decoder (3.48 M parameters, 1.686 GMACs at 352x352). The contour correction enters three semantic readouts through scalar gains
 
 ```
 S~_i = S_i + g_i * C_i,    g_i = 0.25 * tanh(a_i),    a_i = 0 at initialization
